@@ -44,7 +44,7 @@ developing applications that use %{name}.
 %build
 autoconf
 ./configure
-make all INCLUDES="-I %{ocaml_libdir}/cameleon -I %{ocaml_libdir}/cgi"
+make all doc INCLUDES="-I %{ocaml_libdir}/cameleon -I %{ocaml_libdir}/cgi"
 
 %install
 rm -rf %{buildroot}
@@ -61,9 +61,12 @@ rm -rf %{buildroot}
 %doc LICENSE
 %dir %{ocaml_libdir}/ows
 %{ocaml_libdir}/ows/*.cmi
+%{ocaml_libdir}/ows/*.cma
 
 %files devel
 %defattr(-,root,root)
 %doc LICENSE INSTALL README
+%doc doc
 %dir %{ocaml_libdir}/ows/*
-%exclude %{ocaml_libdir}/ows/*.cmi
+%{ocaml_libdir}/ows/*.cmxa
+%{ocaml_libdir}/ows/*.a
