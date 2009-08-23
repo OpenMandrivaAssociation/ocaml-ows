@@ -1,6 +1,6 @@
 %define name	ocaml-ows
 %define version	0.1
-%define release	%mkrel 1
+%define release	%mkrel 2
 
 %if %mdkversion > 200900
 %define ocaml_libdir %{_libdir}/ocaml
