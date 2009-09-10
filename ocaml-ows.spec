@@ -1,6 +1,6 @@
 %define name	ocaml-ows
 %define version	0.1
-%define release	%mkrel 2
+%define release	%mkrel 3
 
 %if %mdkversion > 200900
 %define ocaml_libdir %{_libdir}/ocaml
@@ -52,6 +52,7 @@ install -d -m 755 %{buildroot}%{ocaml_libdir}
 make install \
     DESTDIR=%{buildroot} \
     INSTALL_LIBDIR=%{buildroot}%{ocaml_libdir}/ows
+cp ows.mli %{buildroot}%{ocaml_libdir}/ows/
 
 %clean
 rm -rf %{buildroot}
@@ -70,3 +71,5 @@ rm -rf %{buildroot}
 %dir %{ocaml_libdir}/ows/*
 %{ocaml_libdir}/ows/*.cmxa
 %{ocaml_libdir}/ows/*.a
+%{ocaml_libdir}/ows/*.mli
+
