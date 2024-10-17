@@ -14,7 +14,7 @@ Release:	%{release}
 Summary:    OCaml Web Session
 Group:      Development/Other
 License:    MIT
-URL:        http://pauillac.inria.fr/~guesdon/Tools/Tars/
+URL:        https://pauillac.inria.fr/~guesdon/Tools/Tars/
 Source0:    http://pauillac.inria.fr/~guesdon/Tools/Tars/ows_snapshot.tar.gz
 Patch:      ows-snapshot-fix-build.patch
 BuildRequires:  ocaml
