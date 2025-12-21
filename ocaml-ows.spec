@@ -17,6 +17,11 @@ License:    MIT
 URL:        https://pauillac.inria.fr/~guesdon/Tools/Tars/
 Source0:    http://pauillac.inria.fr/~guesdon/Tools/Tars/ows_snapshot.tar.gz
 Patch:      ows-snapshot-fix-build.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  ocaml
 BuildRequires:  ocaml-cgi-devel
 BuildRequires:  cameleon-libs
